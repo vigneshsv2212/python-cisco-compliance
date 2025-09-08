@@ -1,0 +1,13 @@
+common:
+  username: demo
+  password: demo
+  secret:   demo
+  device_type: cisco_ios
+
+devices:
+  - name: lab-rtr1
+    host: 127.0.0.1
+  - name: lab-sw1
+    host: 127.0.0.1
+  - name: lab-core1
+    host: 127.0.0.1

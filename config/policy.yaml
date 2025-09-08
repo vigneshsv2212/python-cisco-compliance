@@ -1,0 +1,37 @@
+services:
+  forbid_telnet: true
+  require_ssh: true
+  require_password_encryption: true
+  forbid_http_server: true
+  allow_https_server: false
+  require_banner: true
+  require_exec_timeout_minutes: 10
+  vty_access_class_required: true
+
+snmp:
+  allow_v2c: false
+  require_acl: true
+
+logging:
+  require_buffered: true
+  require_remote: true
+  min_buffer_size: 4096
+
+ntp:
+  require_ntp: true
+  servers:
+    - 0.pool.ntp.org
+    - 1.pool.ntp.org
+
+metadata:
+  ssh_only:              { title: "SSH only on VTY",           severity: "high",   control: "CIS 1.1.2" }
+  telnet_forbidden:      { title: "Telnet disabled",           severity: "high",   control: "CIS 1.1.1" }
+  http_server_disabled:  { title: "HTTP disabled",             severity: "medium", control: "CIS 3.1.1" }
+  https_server_disabled: { title: "HTTPS disabled",            severity: "low",    control: "CIS 3.1.2" }
+  banner_present:        { title: "MOTD banner present",       severity: "low",    control: "CIS 1.2.1" }
+  exec_timeout_ok:       { title: "Exec-timeout ≤ policy",     severity: "medium", control: "CIS 1.3.1" }
+  vty_acl_present:       { title: "VTY access-class present",  severity: "high",   control: "NIST AC-17" }
+  snmp_secure:           { title: "SNMP secure (no v2c/RW)",   severity: "high",   control: "CIS 4.1.x" }
+  remote_logging:        { title: "Remote logging configured", severity: "medium", control: "CIS 2.1.1" }
+  buffer_logging:        { title: "Buffered logging ≥ min",    severity: "low",    control: "CIS 2.1.2" }
+  ntp_present:           { title: "NTP server configured",     severity: "low",    control: "CIS 2.2.1" }

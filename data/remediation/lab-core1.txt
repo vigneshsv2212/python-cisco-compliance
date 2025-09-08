@@ -1,0 +1,7 @@
+line vty 0 4
+transport input ssh
+exit
+exec-timeout 10 0
+ip access-list standard MGMT
+ permit 10.0.0.0 0.0.0.255
+access-class MGMT in

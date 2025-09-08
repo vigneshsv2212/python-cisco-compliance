@@ -1,0 +1,155 @@
+{
+  "lab-rtr1": {
+    "score": 46,
+    "checks": {
+      "ssh_only": false,
+      "telnet_forbidden": true,
+      "http_server_disabled": false,
+      "https_server_disabled": true,
+      "banner_present": true,
+      "pwd_encryption": false,
+      "exec_timeout_ok": false,
+      "vty_acl_present": false,
+      "snmp_secure": false,
+      "remote_logging": false,
+      "buffer_logging": false,
+      "ntp_present": false
+    },
+    "findings": [
+      {
+        "key": "ssh_only",
+        "title": "SSH only on VTY",
+        "severity": "high",
+        "control": "CIS 1.1.2"
+      },
+      {
+        "key": "http_server_disabled",
+        "title": "HTTP disabled",
+        "severity": "medium",
+        "control": "CIS 3.1.1"
+      },
+      {
+        "key": "pwd_encryption",
+        "title": "pwd_encryption",
+        "severity": "low",
+        "control": "-"
+      },
+      {
+        "key": "exec_timeout_ok",
+        "title": "Exec-timeout \u2264 policy",
+        "severity": "medium",
+        "control": "CIS 1.3.1"
+      },
+      {
+        "key": "vty_acl_present",
+        "title": "VTY access-class present",
+        "severity": "high",
+        "control": "NIST AC-17"
+      },
+      {
+        "key": "snmp_secure",
+        "title": "SNMP secure (no v2c/RW)",
+        "severity": "high",
+        "control": "CIS 4.1.x"
+      },
+      {
+        "key": "remote_logging",
+        "title": "Remote logging configured",
+        "severity": "medium",
+        "control": "CIS 2.1.1"
+      },
+      {
+        "key": "buffer_logging",
+        "title": "Buffered logging \u2265 min",
+        "severity": "low",
+        "control": "CIS 2.1.2"
+      },
+      {
+        "key": "ntp_present",
+        "title": "NTP server configured",
+        "severity": "low",
+        "control": "CIS 2.2.1"
+      }
+    ]
+  },
+  "lab-sw1": {
+    "score": 67,
+    "checks": {
+      "ssh_only": false,
+      "telnet_forbidden": true,
+      "http_server_disabled": true,
+      "https_server_disabled": true,
+      "banner_present": true,
+      "pwd_encryption": true,
+      "exec_timeout_ok": false,
+      "vty_acl_present": false,
+      "snmp_secure": false,
+      "remote_logging": true,
+      "buffer_logging": true,
+      "ntp_present": true
+    },
+    "findings": [
+      {
+        "key": "ssh_only",
+        "title": "SSH only on VTY",
+        "severity": "high",
+        "control": "CIS 1.1.2"
+      },
+      {
+        "key": "exec_timeout_ok",
+        "title": "Exec-timeout \u2264 policy",
+        "severity": "medium",
+        "control": "CIS 1.3.1"
+      },
+      {
+        "key": "vty_acl_present",
+        "title": "VTY access-class present",
+        "severity": "high",
+        "control": "NIST AC-17"
+      },
+      {
+        "key": "snmp_secure",
+        "title": "SNMP secure (no v2c/RW)",
+        "severity": "high",
+        "control": "CIS 4.1.x"
+      }
+    ]
+  },
+  "lab-core1": {
+    "score": 77,
+    "checks": {
+      "ssh_only": false,
+      "telnet_forbidden": true,
+      "http_server_disabled": true,
+      "https_server_disabled": true,
+      "banner_present": true,
+      "pwd_encryption": true,
+      "exec_timeout_ok": false,
+      "vty_acl_present": false,
+      "snmp_secure": true,
+      "remote_logging": true,
+      "buffer_logging": true,
+      "ntp_present": true
+    },
+    "findings": [
+      {
+        "key": "ssh_only",
+        "title": "SSH only on VTY",
+        "severity": "high",
+        "control": "CIS 1.1.2"
+      },
+      {
+        "key": "exec_timeout_ok",
+        "title": "Exec-timeout \u2264 policy",
+        "severity": "medium",
+        "control": "CIS 1.3.1"
+      },
+      {
+        "key": "vty_acl_present",
+        "title": "VTY access-class present",
+        "severity": "high",
+        "control": "NIST AC-17"
+      }
+    ]
+  }
+}

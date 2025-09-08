@@ -1,0 +1,253 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Network Compliance Report</title>
+  <style>
+    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 24px; line-height:1.4}
+    .ok{color:#1b5e20}
+    .bad{color:#b71c1c}
+    table{border-collapse: collapse; width:100%; margin-bottom: 24px}
+    th,td{border:1px solid #ddd; padding:8px}
+    th{background:#f5f5f5}
+    .score{font-weight:700}
+    .chip{display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; border:1px solid #ddd; margin-right:6px}
+    .sev-high{background:#ffebee}
+    .sev-medium{background:#fff8e1}
+    .sev-low{background:#e8f5e9}
+    h2{margin-top:32px}
+  </style>
+</head>
+<body>
+  <h1>Network Compliance Report</h1>
+  <p>Generated: 2025-09-07 20:55:46.333176</p>
+
+  <table>
+    <tr><th>Device</th><th>Score</th><th>SSH</th><th>Telnet Off</th><th>HTTP Off</th><th>HTTPS Off</th><th>Banner</th><th>Exec Timeout</th><th>VTY ACL</th><th>SNMP Secure</th><th>Remote Logging</th><th>Buffered</th><th>NTP</th></tr>
+    
+    <tr>
+      <td>lab-rtr1</td>
+      <td class="score">46</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+    </tr>
+    
+    <tr>
+      <td>lab-sw1</td>
+      <td class="score">67</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+    </tr>
+    
+    <tr>
+      <td>lab-core1</td>
+      <td class="score">77</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="bad">✖</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+        <td class="ok">✔</td>
+      
+    </tr>
+    
+  </table>
+
+  
+    
+    <h2>lab-rtr1 — Failed Checks</h2>
+    <table>
+      <tr><th>Finding</th><th>Severity</th><th>Control</th></tr>
+      
+        
+        <tr>
+          <td>SSH only on VTY</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>CIS 1.1.2</td>
+        </tr>
+      
+        
+        <tr>
+          <td>HTTP disabled</td>
+          <td><span class="chip sev-medium">Medium</span></td>
+          <td>CIS 3.1.1</td>
+        </tr>
+      
+        
+        <tr>
+          <td>pwd_encryption</td>
+          <td><span class="chip sev-low">Low</span></td>
+          <td>-</td>
+        </tr>
+      
+        
+        <tr>
+          <td>Exec-timeout ≤ policy</td>
+          <td><span class="chip sev-medium">Medium</span></td>
+          <td>CIS 1.3.1</td>
+        </tr>
+      
+        
+        <tr>
+          <td>VTY access-class present</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>NIST AC-17</td>
+        </tr>
+      
+        
+        <tr>
+          <td>SNMP secure (no v2c/RW)</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>CIS 4.1.x</td>
+        </tr>
+      
+        
+        <tr>
+          <td>Remote logging configured</td>
+          <td><span class="chip sev-medium">Medium</span></td>
+          <td>CIS 2.1.1</td>
+        </tr>
+      
+        
+        <tr>
+          <td>Buffered logging ≥ min</td>
+          <td><span class="chip sev-low">Low</span></td>
+          <td>CIS 2.1.2</td>
+        </tr>
+      
+        
+        <tr>
+          <td>NTP server configured</td>
+          <td><span class="chip sev-low">Low</span></td>
+          <td>CIS 2.2.1</td>
+        </tr>
+      
+    </table>
+    
+  
+    
+    <h2>lab-sw1 — Failed Checks</h2>
+    <table>
+      <tr><th>Finding</th><th>Severity</th><th>Control</th></tr>
+      
+        
+        <tr>
+          <td>SSH only on VTY</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>CIS 1.1.2</td>
+        </tr>
+      
+        
+        <tr>
+          <td>Exec-timeout ≤ policy</td>
+          <td><span class="chip sev-medium">Medium</span></td>
+          <td>CIS 1.3.1</td>
+        </tr>
+      
+        
+        <tr>
+          <td>VTY access-class present</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>NIST AC-17</td>
+        </tr>
+      
+        
+        <tr>
+          <td>SNMP secure (no v2c/RW)</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>CIS 4.1.x</td>
+        </tr>
+      
+    </table>
+    
+  
+    
+    <h2>lab-core1 — Failed Checks</h2>
+    <table>
+      <tr><th>Finding</th><th>Severity</th><th>Control</th></tr>
+      
+        
+        <tr>
+          <td>SSH only on VTY</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>CIS 1.1.2</td>
+        </tr>
+      
+        
+        <tr>
+          <td>Exec-timeout ≤ policy</td>
+          <td><span class="chip sev-medium">Medium</span></td>
+          <td>CIS 1.3.1</td>
+        </tr>
+      
+        
+        <tr>
+          <td>VTY access-class present</td>
+          <td><span class="chip sev-high">High</span></td>
+          <td>NIST AC-17</td>
+        </tr>
+      
+    </table>
+    
+  
+</body>
+</html>
