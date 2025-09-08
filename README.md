@@ -93,25 +93,6 @@ _Remediation Export (lab-sw1):_
 _Remediation Export (lab-core1):_  
 ![lab-core1](screenshots/lab-core1.png.jpeg)
 
----
 
-## 🛣️ Roadmap
-
-- [ ] Live device integration with Netmiko/NAPALM  
-- [ ] Apply-mode (push fixes directly to lab routers)  
-- [ ] Flask web dashboard + REST API  
-- [ ] Historical compliance tracking with charts  
-- [ ] Docker container + GitHub Actions CI/CD  
-
----
-
-## 📌 Why This Project Matters
-
-- Bridges **network automation** and **security compliance**  
-- Demonstrates **policy-as-code** with YAML baselines  
-- Shows both **detection (audit)** and **action (remediation)**  
-- Scales from **student demo** to **enterprise-ready tool**  
-
----
 
 
